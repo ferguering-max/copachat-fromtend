@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#063d2d">
+  <title>CopaBot — Especialista na Copa do Mundo</title>
+  <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="hero">
+      <div class="stadium-lights" aria-hidden="true"></div>
+      <div class="hero-top">
+        <div class="brand-mark" aria-hidden="true">🏆</div>
+        <div>
+          <p class="eyebrow">O mundo inteiro joga junto</p>
+          <h1>Copa<span>Bot</span></h1>
+        </div>
+        <div class="flag-strip" aria-label="Bandeiras de seleções">🇧🇷 🇦🇷 🇫🇷 🇩🇪 🇯🇵</div>
+      </div>
+      <p class="hero-description">Seu especialista em história, seleções, craques e curiosidades da Copa do Mundo.</p>
+      <div class="tournament-ribbon">
+        <span>⚽ História</span><span>🌎 Seleções</span><span>📊 Estatísticas</span><span>🏅 Campeões</span>
+      </div>
+    </header>
+
+    <main class="chat-card">
+      <div class="chat-heading">
+        <div class="bot-avatar" aria-hidden="true">🏆</div>
+        <div>
+          <h2>Central da Copa</h2>
+          <p><span class="status-dot"></span> Especialista pronto para conversar</p>
+        </div>
+        <button id="clear-chat" class="clear-button" type="button" title="Limpar conversa">Nova conversa ↺</button>
+      </div>
+
+      <section id="messages" class="messages" aria-label="Conversa" aria-live="polite">
+        <article class="message bot-message">
+          <div class="message-avatar">🏆</div>
+          <div class="bubble">
+            <p>Olá, torcedor(a)! ⚽ Sou o CopaBot, seu guia pela maior competição de seleções do futebol.</p>
+            <p>Pergunte sobre campeões, artilheiros, jogos históricos, seleções ou curiosidades do Mundial.</p>
+            <span class="message-time">Agora</span>
+          </div>
+        </article>
+      </section>
+
+      <div class="suggestions" aria-label="Perguntas sugeridas">
+        <button type="button" data-prompt="Quais seleções mais venceram a Copa do Mundo?">🏆 Maiores campeões</button>
+        <button type="button" data-prompt="Quem é o maior artilheiro da história da Copa do Mundo masculina?">🥅 Artilheiros</button>
+        <button type="button" data-prompt="Conte uma curiosidade sobre a Copa do Mundo de 1950.">📚 Curiosidade histórica</button>
+      </div>
+
+      <form id="chat-form" class="composer">
+        <label class="sr-only" for="message-input">Sua pergunta sobre a Copa do Mundo</label>
+        <textarea id="message-input" rows="1" maxlength="2000" placeholder="Pergunte algo sobre a Copa do Mundo..." required></textarea>
+        <button id="send-button" class="send-button" type="submit" aria-label="Enviar mensagem">
+          <span>Enviar</span><span aria-hidden="true">➤</span>
+        </button>
+      </form>
+      <div class="composer-footer">
+        <span>🌍 Conversa restrita à Copa do Mundo de Futebol</span>
+        <span id="char-count">0/2000</span>
+      </div>
+      <div id="error-banner" class="error-banner" role="alert" hidden></div>
+    </main>
+    <footer>Feito para quem vive a emoção do Mundial <span>•</span> <strong>CopaBot</strong></footer>
+  </div>
+  <script src="static/config.js"></script>
+  <script src="static/script.js" defer></script>
+</body>
+</html>
